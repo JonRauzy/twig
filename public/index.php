@@ -18,10 +18,10 @@ spl_autoload_register(function ($class) {
 require_once "../vendor/autoload.php";
 
 
-// $loader = new \Twig\Loader\FilesystemLoader('../view');
-// $twig = new \Twig\Environment($loader, [
-//     'cache' => '../view/chache',
-// ]);
+$loader = new \Twig\Loader\FilesystemLoader('../view/template.php');
+$twig = new \Twig\Environment($loader, [
+    'cache' => '../view/chache',
+]);
 
     
 // db connection
