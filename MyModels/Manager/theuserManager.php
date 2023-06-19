@@ -175,7 +175,7 @@ class theuserManager implements ManagerInterface
             $prepare->bindValue(2, $user->getTheuserpwd());
             $prepare->bindValue(3, $user->getTheusermail());
             $prepare->bindValue(4, $user->getTheuseruniqid());
-            $prepare->bindValue(5, $user->getTheuseracivate());
+            $prepare->bindValue(5, $user->getTheuseractivate());
             $prepare->bindValue(6, $user->getPermissionIdpermission());
             $result = $prepare->execute();
         } catch (Exception $e) {

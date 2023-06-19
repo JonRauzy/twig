@@ -27,13 +27,8 @@ try {
     exit;
 }
 
-$a = new \MyModels\Mapping\permissionMapping(['idpermission' => 1, 'permissionname' => 'test', 'permissionrole' => 5]);
-
-var_dump($a);
-
-$b = new \MyModels\Manager\permissionManager($pdo);
-
-var_dump($b->permissionSelectAll());
+// ROUTER : 
+require_once "../controller/puclicController.php";
 
 // close connection (portabilité hors MySQL, mettre en commentaire en cas de connexion permanente)
 $pdo = null;
