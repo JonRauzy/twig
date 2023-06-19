@@ -4,7 +4,7 @@ namespace MyModels\Mapping;
 
 use MyModels\Abstract\AbstractMapping;
 
-class theimageMapping extends AbstractMapping
+class TheimageMapping extends AbstractMapping
 {
     private int $idtheimage;
     private string $theimagename;

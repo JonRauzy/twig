@@ -7,7 +7,7 @@ use MyModels\Interface\ManagerInterface;
 use MyModels\Mapping\thearticleMapping;
 use PDO;
 
-class thearticleManager implements ManagerInterface
+class ThearticleManager implements ManagerInterface
 {
 
     private PDO $connect;

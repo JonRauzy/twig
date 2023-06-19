@@ -9,7 +9,7 @@ use MyModels\Trait\userEntryProtectionTrait as protection;
 
 // trait renommé en protection, on doit utiliser le 'use protection' dans la classe
 
-class theuserMapping extends AbstractMapping
+class TheuserMapping extends AbstractMapping
 {
     private int $idtheuser;
 

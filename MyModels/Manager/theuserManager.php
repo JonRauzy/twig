@@ -8,7 +8,7 @@ use MyModels\Mapping\theuserMapping;
 use PDO;
 use Exception;
 
-class theuserManager implements ManagerInterface
+class TheuserManager implements ManagerInterface
 {
     private PDO $connect;
 

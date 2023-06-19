@@ -2,7 +2,7 @@
 namespace MyModels\Mapping;
 
 use MyModels\Abstract\AbstractMapping;
-class thecommentMapping extends AbstractMapping{
+class ThecommentMapping extends AbstractMapping{
         private int $idthecomment;
         private int $theuser_idtheuser;
         private string $thecommenttext;

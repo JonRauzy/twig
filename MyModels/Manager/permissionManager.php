@@ -8,7 +8,7 @@ use PDO;
 use Exception;
 use MyModels\Mapping\permissionMapping;
 
-class permissionManager implements ManagerInterface
+class PermissionManager implements ManagerInterface
 {
     private PDO $connect;
 

@@ -6,7 +6,7 @@ use MyModels\Interface\ManagerInterface;
 use PDO;
 use Exception;
 
-class thecommentManager implements ManagerInterface
+class ThecommentManager implements ManagerInterface
 {
     private PDO $connect;
 

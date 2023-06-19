@@ -3,7 +3,7 @@
 namespace MyModels\Mapping;
 
 use MyModels\Abstract\AbstractMapping;
-class thesectionMapping extends AbstractMapping
+class ThesectionMapping extends AbstractMapping
 {
     // Propriétés
     private int $idthesection;

@@ -8,7 +8,7 @@ use MyModels\Trait\userEntryProtectionTrait;
 use PDO;
 use Exception;
 
-class thesectionManager implements ManagerInterface
+class ThesectionManager implements ManagerInterface
 {
 
     private PDO $connect;
