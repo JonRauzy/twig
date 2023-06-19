@@ -2,7 +2,7 @@
 
 namespace MyModels\Trait;
 
-trait userEntryProtectionTrait
+trait UserEntryProtectionTrait
 {
     public static function userEntryProtection(
         string            $entry,

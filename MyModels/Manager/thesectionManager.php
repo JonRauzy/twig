@@ -4,7 +4,7 @@ namespace MyModels\Manager;
 
 // utilisation de l'interface des Manager
 use MyModels\Interface\ManagerInterface;
-use MyModels\Trait\userEntryProtectionTrait;
+use MyModels\Trait\UserEntryProtectionTrait;
 use PDO;
 use Exception;
 
@@ -32,13 +32,13 @@ class ThesectionManager implements ManagerInterface
     public function SelectOneThesectionBySlug(string $slug): array|string
     {
         // utilisation du trait de protection
-        $slug = userEntryProtectionTrait::userEntryProtection($slug);
+        $slug = UserEntryProtectionTrait::userEntryProtection($slug);
         $sql = "SELECT * FROM thesection WHERE thesectionslug=?";
         $prepare = $this->connect->prepare($sql);
         try{
             $prepare->execute([$slug]);
             return $prepare->fetch(\PDO::FETCH_ASSOC);
-        }catch(\Exception $e){
+        }catch(Exception $e){
             return $e->getMessage();
         }
 
