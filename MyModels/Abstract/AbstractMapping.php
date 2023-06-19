@@ -2,14 +2,16 @@
 
 namespace MyModels\Abstract;
 
-class AbstractMapping
+abstract class AbstractMapping
 {
+    
     // constructeur - Appelé lors de l'instanciation
     public function __construct(array $tab)
     {
         // tentative d'hydration des données de Personnage
         $this->hydrate($tab);
     }
+
 
     // création de notre hydratation, en partant d'un tableau associatif et de ses clefs, on va régénérer le nom des setters existants
     protected function hydrate(array $assoc)
@@ -24,4 +26,8 @@ class AbstractMapping
             }
         }
     }
+
+
+    public abstract function __toString();
+
 }

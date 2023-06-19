@@ -5,7 +5,7 @@ namespace MyModels\Mapping;
 use MyModels\Abstract\AbstractMapping;
 use MyModels\Trait\SlugifyTrait;
 
-class thearticleMapping extends AbstractMapping
+class ThearticleMapping extends AbstractMapping
 {
 
     // Propriétés
@@ -129,9 +129,9 @@ class thearticleMapping extends AbstractMapping
     public function setThearticletitle(string $thearticletitle) : thearticleMapping
     {
         // dépasse 120 caractères
-        if (strlen($thearticletitle) > 120) {
+        if (strlen($thearticletitle) > 1200) {
             // affichage de l'erreur
-            trigger_error("La longueur du titre ne doit pas dépasser 120 caractères", E_USER_NOTICE);
+            trigger_error("La longueur du titre ne doit pas dépasser ta mère", E_USER_NOTICE);
             return $this;
         }
         else {
@@ -156,5 +156,10 @@ class thearticleMapping extends AbstractMapping
     {
         $this->thearticleactivate = $thearticleactivate;
         return $this;
+    }
+
+    public function __toString()
+    {
+        return self::class;
     }
 }

@@ -82,4 +82,9 @@ class thesectionMapping extends AbstractMapping
         }
     }
 
+    public function __toString()
+    {
+        return self::class;
+    }
+
 }

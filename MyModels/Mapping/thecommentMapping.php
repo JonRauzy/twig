@@ -76,4 +76,9 @@ class thecommentMapping extends AbstractMapping{
         return $this;
     }
 
+    public function __toString()
+    {
+        return self::class;
+    }
+    
 }

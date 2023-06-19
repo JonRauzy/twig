@@ -152,4 +152,9 @@ class theuserMapping extends AbstractMapping
         }
         return $this;
     }
+
+    public function __toString()
+    {
+        return self::class;
+    }
 }

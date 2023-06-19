@@ -28,7 +28,7 @@ try {
 }
 
 // ROUTER : 
-require_once "../controller/puclicController.php";
+require_once "../controller/publicController.php";
 
 // close connection (portabilité hors MySQL, mettre en commentaire en cas de connexion permanente)
 $pdo = null;

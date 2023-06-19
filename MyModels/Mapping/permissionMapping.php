@@ -2,57 +2,102 @@
 
 namespace MyModels\Mapping;
 use MyModels\Abstract\AbstractMapping;
-class permissionMapping extends AbstractMapping
+use Exception;
+
+
+class PermissionMapping extends AbstractMapping
 {
     // Propriétés
-    private int $idpermission;
-    private string $permissionname;
-    private int $permissionrole;
+    private int $idPermission;
+    private string $permissionName;
+    private int $permissionRole;
 
     // Getters
 
-    public function getIdpermission(): int
+
+ 
+
+    public function __toString(): string
     {
-        return $this->idpermission;
+        return self::class;
     }
 
-    public function getPermissionname(): string
+
+
+    /**
+     * Get the value of idPermission
+     *
+     * @return int
+     */
+    public function getIdPermission(): int
     {
-        return $this->permissionname;
+        return $this->idPermission;
     }
 
-    public function getPermissionrole(): int
+    /**
+     * Set the value of idPermission
+     *
+     * @param int $idPermission
+     *
+     * @return self
+     */
+    public function setIdPermission(int $idPermission): self
     {
-        return $this->permissionrole;
-    }
+        $this->idPermission = $idPermission;
 
-    // Setters
-
-    public function setIdpermission(int $idpermission): PermissionMapping
-    {
-        $this->idpermission = $idpermission;
         return $this;
     }
 
-    public function setPermissionname(string $permissionname): PermissionMapping
+    /**
+     * Get the value of permissionName
+     *
+     * @return string
+     */
+    public function getPermissionName(): string
     {
-        // dépasse 45 caractères
-        if(strlen($permissionname)>45){
+        return $this->permissionName;
+    }
+
+    /**
+     * Set the value of permissionName
+     *
+     * @param string $permissionName
+     *
+     * @return self
+     */
+    public function setPermissionName(string $permissionName): self
+    {
+        if(strlen($permissionName)>45){
             // affichage de l'erreur
-            trigger_error("Le nom de la permission ne doit pas dépasser 45 caractères", E_USER_NOTICE);
+            throw new Exception("Le nom de la permission ne doit pas dépasser 45 caractères", E_USER_NOTICE);
             return $this;
         }else {
-            $this->permissionname = $permissionname;
+            $this->permissionName = $permissionName;
             return $this;
         }
     }
 
-    public function setPermissionrole(int $permissionrole): PermissionMapping
+    /**
+     * Get the value of permissionRole
+     *
+     * @return int
+     */
+    public function getPermissionRole(): int
     {
-        $this->permissionrole = $permissionrole;
-        return $this;
+        return $this->permissionRole;
     }
 
+    /**
+     * Set the value of permissionRole
+     *
+     * @param int $permissionRole
+     *
+     * @return self
+     */
+    public function setPermissionRole(int $permissionRole): self
+    {
+        $this->permissionRole = $permissionRole;
 
-
+        return $this;
+    }
 }
