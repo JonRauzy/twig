@@ -44,5 +44,4 @@ class ThesectionManager implements ManagerInterface
 
     }
 
-
 }
