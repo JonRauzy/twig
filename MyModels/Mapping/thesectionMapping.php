@@ -46,7 +46,7 @@ class ThesectionMapping extends AbstractMapping
     public function setthesectiontitle(string $thesectiontitle): thesectionMapping
     {
         // dépasse 60 caractères
-        if(strlen($thesectiontitle)>60){
+        if(strlen($thesectiontitle)>600){
             // affichage de l'erreur
             trigger_error("Le nom de la permission ne doit pas dépasser 60 caractères", E_USER_NOTICE);
             return $this;
@@ -59,7 +59,7 @@ class ThesectionMapping extends AbstractMapping
     public function setthesectionslug(string $thesectionslug): thesectionMapping
     {
         // dépasse 60 caractères
-        if(strlen($thesectionslug)>60){
+        if(strlen($thesectionslug)>600){
             // affichage de l'erreur
             trigger_error("Le nom de la permission ne doit pas dépasser 60 caractères", E_USER_NOTICE);
             return $this;
@@ -72,7 +72,7 @@ class ThesectionMapping extends AbstractMapping
     public function setthesectiondesc(string $thesectiondesc): thesectionMapping
     {
         // dépasse 300 caractères
-        if(strlen($thesectiondesc)>300){
+        if(strlen($thesectiondesc)>600){
             // affichage de l'erreur
             trigger_error("Le nom de la permission ne doit pas dépasser 300 caractères", E_USER_NOTICE);
             return $this;

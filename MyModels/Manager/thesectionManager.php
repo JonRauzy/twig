@@ -21,7 +21,7 @@ class ThesectionManager implements ManagerInterface
     public function SelectAllThesection(): array{
         $prepare = $this->connect->prepare("SELECT idthesection, thesectiontitle, thesectionslug FROM thesection  ORDER BY idthesection ASC;");
         $prepare->execute();
-        return $prepare->fetchAll(\PDO::FETCH_ASSOC);
+        return $prepare->fetchAll(PDO::FETCH_ASSOC);
     }
 
 
@@ -37,7 +37,7 @@ class ThesectionManager implements ManagerInterface
         $prepare = $this->connect->prepare($sql);
         try{
             $prepare->execute([$slug]);
-            return $prepare->fetch(\PDO::FETCH_ASSOC);
+            return $prepare->fetch(PDO::FETCH_ASSOC);
         }catch(Exception $e){
             return $e->getMessage();
         }

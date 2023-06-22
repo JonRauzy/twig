@@ -20,7 +20,7 @@ require_once "../vendor/autoload.php";
 
 // twig
 # chemin vers le dossier des templates
-$loader = new FilesystemLoader('../view');
+$loader = new FilesystemLoader('../public');
 # instanciation de l'environnement Twig
 $twig = new Environment($loader, [
     'cache' => false,
