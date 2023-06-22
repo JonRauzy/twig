@@ -13,5 +13,6 @@ try {
 
 // Path: controller\publicController.php
 echo $twig->render("public/public_homepage.html.twig", [
-    "mesSections" => $thesection
+    "mesSections" => $thesection,
+    "base_url" => MY_URL,
 ]);
